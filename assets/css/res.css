@@ -1,0 +1,92 @@
+@media (min-width: 1024px) { 
+    .pc{
+        display: block;
+    }
+}
+
+@media (min-width:720px)and(max-width: 1023px) { 
+    .logo{
+        color: brown;
+    }
+}
+
+@media (max-width:710px) { 
+
+    #header{
+        align-items:flex-start;
+        margin: 10px 10px;
+        
+    }
+
+    .logo::after{   
+         top: 19px;
+        right: -10px;
+    }
+
+    .info{
+        display: none;
+    }
+
+    .social{
+        display: none;
+    }
+
+    .menu{
+        position: relative;
+        display: block;
+    }
+
+
+    .wrapper{
+        display: block;
+    }
+
+    .paint{
+        margin: 10px 10px;
+    }
+
+    .model{
+        width: 200px;
+        position: relative;
+        top:0;
+        left:-30px;
+    }
+
+    .splash{
+        left: 80px;
+        top: 190px;
+        width: 200px;
+    }
+
+    @keyframes animateUser {
+        50%{
+            bottom: 10px;
+            left: -20px;
+    
+        }
+    }
+
+    @keyframes animateSpash {
+        50%{
+            left:90px;
+            bottom: 0;
+            width: 70%;
+    
+        }
+    }
+
+    .container{
+        margin: 30px;
+    }
+
+    .container::after{
+        display: none;
+    }
+
+    .intro{
+        color:#405161;
+        font-size: 4rem;
+        font-weight: 800;
+    }
+
+}
