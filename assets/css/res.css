@@ -1,92 +1,147 @@
-@media (min-width: 1024px) { 
-    .pc{
-        display: block;
-    }
+@media (min-width: 1024px) {
+  .pc {
+    display: block;
+  }
 }
 
-@media (min-width:720px)and(max-width: 1023px) { 
-    .logo{
-        color: brown;
-    }
+@media (min-width: 720px) and(max-width: 1023px) {
+  .logo {
+    color: brown;
+  }
 }
 
-@media (max-width:710px) { 
+@media (max-width: 710px) {
+  #header {
+    max-width: 100%;
+  }
 
-    #header{
-        align-items:flex-start;
-        margin: 10px 10px;
-        
+  #header .nav {
+    margin: 0;
+    flex-direction: row-reverse;
+  }
+
+  #header .logo {
+    display: none;
+  }
+
+  #header .nav .select {
+    display: none;
+  }
+
+  #header .nav .social {
+    display: block;
+  }
+
+  .moon,
+  .sun {
+    font-size: 24px;
+    border: none;
+  }
+
+  #header .nav .menu {
+    padding: 10px;
+    display: block;
+    font-size: 24px;
+  }
+
+  #home {
+    padding-top: 50px;
+    flex-direction: column;
+    min-height: 600px;
+  }
+
+  .paint {
+    margin: 10px 10px;
+    flex: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .frame {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+  }
+
+  .model {
+    width: 200px;
+    position: relative;
+    top: 0;
+  }
+
+  @keyframes animateUser {
+    50% {
+      bottom: 10px;
+      left: -10px;
     }
+  }
 
-    .logo::after{   
-         top: 19px;
-        right: -10px;
+  .splash {
+    width: 100px;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+
+  @keyframes animateSpash {
+    50% {
+      left: 90px;
+      bottom: 0;
+      width: 30%;
     }
+  }
 
-    .info{
-        display: none;
-    }
+  .container {
+    margin: 36px;
+    display: block;
+    order: 1;
+  }
 
-    .social{
-        display: none;
-    }
+  .container::after {
+    display: none;
+  }
 
-    .menu{
-        position: relative;
-        display: block;
-    }
+  .welcome {
+    margin-top: 20px;
+  }
 
+  .intro {
+    color: #405161;
+    font-size: 4rem;
+    font-weight: 800;
+  }
 
-    .wrapper{
-        display: block;
-    }
+  #about {
+    padding-top: 30px;
+  }
 
-    .paint{
-        margin: 10px 10px;
-    }
+  .wrapper {
+    flex-direction: column;
+  }
 
-    .model{
-        width: 200px;
-        position: relative;
-        top:0;
-        left:-30px;
-    }
+  .info {
+    margin: 36px;
+    padding: 0;
+  }
 
-    .splash{
-        left: 80px;
-        top: 190px;
-        width: 200px;
-    }
+  .title {
+    text-align: center;
+    font-size: 18px;
+  }
 
-    @keyframes animateUser {
-        50%{
-            bottom: 10px;
-            left: -20px;
-    
-        }
-    }
+  .preface {
+    text-align: center;
+  }
 
-    @keyframes animateSpash {
-        50%{
-            left:90px;
-            bottom: 0;
-            width: 70%;
-    
-        }
-    }
+  #skill {
+    display: flex;
+  }
 
-    .container{
-        margin: 30px;
-    }
+  .icon {
+    flex-direction: column;
+  }
 
-    .container::after{
-        display: none;
-    }
-
-    .intro{
-        color:#405161;
-        font-size: 4rem;
-        font-weight: 800;
-    }
-
+  .skill-icon {
+    padding: 10px 0;
+  }
 }

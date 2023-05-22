@@ -6,9 +6,9 @@ var typed = new Typed(".change", {
   backDelay: 1500,
 });
 
-const menuBtn = document.querySelector(".menu-icon");
-const menubarBtn = document.querySelector(".menu-bar");
-const arrowbarBtn = document.querySelector(".arrow-icon");
+var menuBtn = document.querySelector(".menu-icon");
+var menubarBtn = document.querySelector(".menu-bar");
+var arrowbarBtn = document.querySelector(".arrow-icon");
 
 menuBtn.onclick = function () {
   menuBtn.style.display = "none";
@@ -23,48 +23,48 @@ arrowbarBtn.onclick = function () {
 };
 
 // play the music
-// const audio = new Audio(
-//   "assets/music/TOIGO 토이고  BLUE CHECK Feat Jay Park 박재범 Jessi 제시 Lyrics 가사 ColorCodedLyrics SMTM11.mp3"
-// );
+var audio = new Audio(
+  "assets/music/TOIGO 토이고  BLUE CHECK Feat Jay Park 박재범 Jessi 제시 Lyrics 가사 ColorCodedLyrics SMTM11.mp3"
+);
 
-// var isPlay = false;
+var play = document.querySelector(".music-play");
+var pause = document.querySelector(".music-pause");
+var isPlay = false;
+play.onclick = function () {
+  play.style.display = "none";
+  pause.style.display = "block";
+  if (!isPlay) {
+    audio.play();
+    isPlay = true;
+  } else {
+    audio.pause();
+    isPlay = false;
+  }
+};
 
-// const play = document.querySelector(".music-play");
-// const pause = document.querySelector(".music-pause");
-
-// play.onclick = function () {
-//   play.style.display = "none";
-//   pause.style.display = "block";
-//   if (!isPlay) {
-//     audio.play();
-//     isPlay = true;
-//   } else {
-//     audio.pause();
-//     isPlay = false;
-//   }
-// };
-
-// pause.onclick = function () {
-//   pause.style.display = "none";
-//   play.style.display = "block";
-//   if (isPlay) {
-//     audio.pause();
-//     isPlay = false;
-//   } else {
-//     audio.play();
-//     isPlay = true;
-//   }
-// };
+pause.onclick = function () {
+  pause.style.display = "none";
+  play.style.display = "block";
+  if (isPlay) {
+    audio.pause();
+    isPlay = false;
+  } else {
+    audio.play();
+    isPlay = true;
+  }
+};
 
 var moon = document.querySelector(".moon");
 var sun = document.querySelector(".sun");
 var mode = document.querySelector(".mode");
+var menubar = document.querySelector(".menu-bar");
 
 moon.onclick = function () {
   moon.style.display = "none";
   sun.style.display = "block";
   mode.classList.add("dark");
   mode.classList.remove("light");
+  menubar.style.backgroundColor = "black";
 };
 
 sun.onclick = function () {
@@ -72,4 +72,15 @@ sun.onclick = function () {
   moon.style.display = "block";
   mode.classList.add("light");
   mode.classList.remove("dark");
+  menubar.style.backgroundColor = "white";
 };
+
+var menulistBtn = document.querySelectorAll(".menu-bar li");
+
+menulistBtn.forEach(function (listbtn) {
+  listbtn.onclick = function () {
+    menubarBtn.style.display = "none";
+    menuBtn.style.display = "block";
+    arrowbarBtn.style.display = "none";
+  };
+});

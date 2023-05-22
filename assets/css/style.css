@@ -28,6 +28,7 @@ html {
   background-color: #fff;
   color: var(--text-color);
 }
+
 .dark {
   background-color: #000;
   color: var(--white-color);
@@ -128,7 +129,6 @@ html *::-webkit-scrollbar-track {
 
 .music-play,
 .music-pause {
-  padding-left: 30px;
   cursor: pointer;
 }
 
@@ -164,17 +164,23 @@ html *::-webkit-scrollbar-track {
 }
 
 .menu-bar {
+  width: 100%;
+  height: 100%;
   position: fixed;
-  right: 0;
-  top: 30px;
+  left: 0;
+  top: 0;
   display: none;
   list-style: none;
-  text-align: right;
+  padding: 30px 0;
+  margin: 0;
+  background-color: var(--white-color);
+  z-index: -1;
+  height: 100%;
 }
 
 .menu-bar li {
-  margin: 20px;
-  color: #8200ff;
+  margin: 30px 12px;
+  color: currentColor;
 }
 
 /* Home */
@@ -301,7 +307,6 @@ html *::-webkit-scrollbar-track {
   height: 350px;
 }
 .info {
-  height: 350px;
   max-width: 600px;
   line-height: 1.7;
   font-size: 14px;
