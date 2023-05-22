@@ -1,7 +1,7 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --text-color: #333;
+  --text-color: #405161;
   --navbar-full: 120px;
   --navbar-list: 45px;
   --navbar-second: calc(var(--navbar-full) - var(--navbar-list));
@@ -10,6 +10,7 @@
 a {
   background-color: none;
   text-decoration: none;
+  color: currentColor;
 }
 
 * {
@@ -22,6 +23,14 @@ html {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+.light {
+  background-color: #fff;
+  color: var(--text-color);
+}
+.dark {
+  background-color: #000;
+  color: var(--white-color);
 }
 
 /* Scroll bar */
@@ -39,7 +48,6 @@ html *::-webkit-scrollbar-track {
 }
 /* Header */
 #header {
-  background-color: white;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -56,7 +64,7 @@ html *::-webkit-scrollbar-track {
 .logo {
   position: relative;
   font-size: 3.2rem;
-  color: #405161;
+  color: currentColor;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -75,13 +83,13 @@ html *::-webkit-scrollbar-track {
 .select {
   display: flex;
   list-style: none;
-  color: #869eaf;
+  color: currentColor;
   font-size: 2.4rem;
   padding-left: 0;
 }
 
 .select li a {
-  color: #869eaf;
+  color: currentColor;
   margin: 12px;
 }
 
@@ -91,11 +99,14 @@ html *::-webkit-scrollbar-track {
 }
 
 .social {
+  margin: 0;
   display: flex;
   list-style: none;
-  color: #405161;
-  font-size: 2.4rem;
+  justify-content: center;
+  color: currentColor;
+  font-size: 3.2rem;
   padding-left: 0;
+  align-items: center;
 }
 
 .social li {
@@ -103,13 +114,48 @@ html *::-webkit-scrollbar-track {
 }
 
 .social li a {
-  color: #405161;
+  color: currentColor;
 }
 
 .social li a:hover {
   color: #8200ff;
   cursor: pointer;
 }
+
+.music-pause {
+  display: none;
+}
+
+.music-play,
+.music-pause {
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.light-mode {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.sun,
+.moon {
+  margin-left: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.sun {
+  display: none;
+}
+
 .arrow-icon {
   display: none;
 }
@@ -146,13 +192,13 @@ html *::-webkit-scrollbar-track {
 }
 
 .welcome {
-  color: #405161;
+  color: currentColor;
   font-size: 3rem;
   margin-top: 100px;
 }
 
 .intro {
-  color: #405161;
+  color: currentColor;
   font-size: 7.2rem;
   font-weight: 800;
 }
@@ -163,7 +209,7 @@ html *::-webkit-scrollbar-track {
 
 .letter {
   font-size: 1.4rem;
-  color: #405161;
+  color: currentColor;
   line-height: 2rem;
   letter-spacing: 1.2px;
 }
@@ -238,7 +284,6 @@ html *::-webkit-scrollbar-track {
 #about {
   display: flex;
   min-height: 750px;
-  padding-top: 100px;
 }
 
 .wrapper {
@@ -250,19 +295,18 @@ html *::-webkit-scrollbar-track {
 
 .frame-about {
   border-radius: 5px;
-  object-fit: cover;
 }
 
 .pic-about {
-  height: 300px;
+  height: 350px;
 }
 .info {
-  height: 300px;
+  height: 350px;
   max-width: 600px;
   line-height: 1.7;
   font-size: 14px;
   padding-left: 20px;
-  color: #405161;
+  color: currentColor;
 }
 .title {
   color: #8200ff;
@@ -281,7 +325,6 @@ html *::-webkit-scrollbar-track {
 #skill {
   display: flex;
   min-height: 750px;
-  padding-top: 100px;
 }
 
 .skill-wrapper {
@@ -331,5 +374,5 @@ html *::-webkit-scrollbar-track {
 
 .skill-icon span {
   padding-top: 10px;
-  color: #405161;
+  color: currentColor;
 }
