@@ -29,7 +29,12 @@
   }
 
   #header .nav .social {
-    display: block;
+    display: flex;
+  }
+
+  .language-EN,
+  .language-VI {
+    font-size: 18px;
   }
 
   .moon,
@@ -48,6 +53,22 @@
     padding-top: 50px;
     flex-direction: column;
     min-height: 600px;
+  }
+
+  .welcome {
+    font-size: 3rem;
+  }
+
+  .intro {
+    font-size: 7.2rem;
+  }
+
+  .letter {
+    font-size: 1.4rem;
+  }
+
+  .actions a {
+    font-size: 2rem;
   }
 
   .paint {
@@ -119,18 +140,23 @@
     flex-direction: column;
   }
 
-  .info {
+  .about__pic {
+    height: 300px;
+  }
+
+  .about__info {
     margin: 36px;
     padding: 0;
   }
 
-  .title {
+  .about__title {
     text-align: center;
-    font-size: 18px;
+    font-size: 2rem;
   }
 
-  .preface {
+  .about__preface {
     text-align: center;
+    font-size: 1.8rem;
   }
 
   #skill {

@@ -143,6 +143,20 @@ html *::-webkit-scrollbar-track {
   border-radius: 50%;
 }
 
+.language-EN,
+.language-VI {
+  cursor: pointer;
+}
+
+.language-EN:hover,
+.language-VI:hover {
+  color: #8200ff;
+}
+
+.language-VI {
+  display: none;
+}
+
 .sun,
 .moon {
   margin-left: 30px;
@@ -188,24 +202,26 @@ html *::-webkit-scrollbar-track {
 #home {
   display: flex;
   min-height: 750px;
-  padding-top: 100px;
+  padding: 100px 0;
+  justify-content: center;
 }
 .container {
   margin: 100px 0 100px 200px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .welcome {
   color: currentColor;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-top: 100px;
 }
 
 .intro {
   color: currentColor;
-  font-size: 7.2rem;
+  font-size: 8.2rem;
   font-weight: 800;
 }
 
@@ -214,7 +230,7 @@ html *::-webkit-scrollbar-track {
 }
 
 .letter {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: currentColor;
   line-height: 2rem;
   letter-spacing: 1.2px;
@@ -230,7 +246,7 @@ html *::-webkit-scrollbar-track {
   background-color: #405161;
   color: white;
   padding: 8px;
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin-right: 8px;
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
@@ -241,7 +257,6 @@ html *::-webkit-scrollbar-track {
 }
 
 .paint {
-  flex: 1;
   margin: 80px;
 }
 
@@ -278,6 +293,7 @@ html *::-webkit-scrollbar-track {
   width: 500px;
   transform: translate(-50%, -50%) rotate(35deg);
   animation: animateSpash 4s linear infinite;
+  display: none;
 }
 
 @keyframes animateSpash {
@@ -290,6 +306,7 @@ html *::-webkit-scrollbar-track {
 #about {
   display: flex;
   min-height: 750px;
+  padding-top: 200px;
 }
 
 .wrapper {
@@ -299,30 +316,33 @@ html *::-webkit-scrollbar-track {
   margin: auto;
 }
 
-.frame-about {
+.about__frame {
   border-radius: 5px;
 }
 
-.pic-about {
-  height: 350px;
+.about__pic {
+  height: 400px;
 }
-.info {
+.about__info {
   max-width: 600px;
   line-height: 1.7;
   font-size: 14px;
   padding-left: 20px;
   color: currentColor;
 }
-.title {
+.about__title {
   color: #8200ff;
   font-weight: 700;
+  font-size: 3rem;
 }
-.preface {
+.about__preface {
   margin: 8px 0 8px 0;
+  font-size: 2.2rem;
 }
-.letter {
+.about__letter {
   margin: 0;
-  line-height: 1.6;
+  line-height: 2;
+  font-size: 1.6rem;
 }
 
 /* Skill */
@@ -330,6 +350,7 @@ html *::-webkit-scrollbar-track {
 #skill {
   display: flex;
   min-height: 750px;
+  margin: 100px;
 }
 
 .skill-wrapper {
