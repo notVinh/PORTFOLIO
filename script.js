@@ -54,22 +54,6 @@ var languages = [
 ];
 
 var currentLanguage = 1;
-var enBtn = document.querySelector(".language-EN");
-var viBtn = document.querySelector(".language-VI");
-
-enBtn.onclick = function () {
-  enBtn.style.display = "none";
-  viBtn.style.display = "block";
-  changeLanguage(0);
-};
-
-viBtn.onclick = function () {
-  viBtn.style.display = "none";
-  enBtn.style.display = "block";
-  currentLanguage = 0;
-  changeLanguage(1);
-};
-
 var changeLanguage = function (currentLanguage) {
   var selectSpa = document.querySelector(".select");
   var itemSelect = [];
@@ -80,7 +64,7 @@ var changeLanguage = function (currentLanguage) {
   }
   selectSpa.innerHTML = itemSelect.join("");
 
-  document.querySelector(".menu-bar").innerHTML = itemSelect.join("");
+  // document.querySelector(".menu-bar").innerHTML = itemSelect.join("");
 
   var infoItem = languages[currentLanguage].content.info;
   var infoSpa = (document.querySelector(
@@ -116,19 +100,36 @@ ${infoItem[2]}
 changeLanguage(currentLanguage);
 
 var menuBtn = document.querySelector(".menu-icon");
-var menubarBtn = document.querySelector(".menu-bar");
 var arrowbarBtn = document.querySelector(".arrow-icon");
+var menubar = document.querySelector(".menu-bar");
+var menulistBtn = document.querySelectorAll(".menu-bar li");
+
+var enBtn = document.querySelector(".language-EN");
+var viBtn = document.querySelector(".language-VI");
+
+enBtn.onclick = function () {
+  enBtn.style.display = "none";
+  viBtn.style.display = "block";
+  changeLanguage(0);
+};
+
+viBtn.onclick = function () {
+  viBtn.style.display = "none";
+  enBtn.style.display = "block";
+  currentLanguage = 0;
+  changeLanguage(1);
+};
 
 menuBtn.onclick = function () {
   menuBtn.style.display = "none";
   arrowbarBtn.style.display = "block";
-  menubarBtn.style.display = "block";
+  menubar.style.display = "block";
 };
 
 arrowbarBtn.onclick = function () {
   menuBtn.style.display = "block";
   arrowbarBtn.style.display = "none";
-  menubarBtn.style.display = "none";
+  menubar.style.display = "none";
 };
 
 // play the music
@@ -166,7 +167,6 @@ arrowbarBtn.onclick = function () {
 var moon = document.querySelector(".moon");
 var sun = document.querySelector(".sun");
 var mode = document.querySelector(".mode");
-var menubar = document.querySelector(".menu-bar");
 
 moon.onclick = function () {
   moon.style.display = "none";
@@ -184,13 +184,12 @@ sun.onclick = function () {
   menubar.style.backgroundColor = "white";
 };
 
-var menulistBtn = document.querySelectorAll(".menu-bar li");
-
-menulistBtn.forEach(function (listbtn) {
+var vinh = Array.from(menulistBtn).forEach(function (listbtn) {
   listbtn.onclick = function () {
-    menubarBtn.style.display = "none";
+    menubar.style.display = "none";
     menuBtn.style.display = "block";
     arrowbarBtn.style.display = "none";
+    console.log("vinh");
   };
 });
 
